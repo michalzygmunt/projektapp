@@ -14,8 +14,8 @@
                 class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <beans:property name="url" value="jdbc:mysql://localhost:3306/bazadanych_ksiazki?serverTimezone=Europe/Belgrade" />
-        <beans:property name="username" value="admin" />
-        <beans:property name="password" value="$2a$04$zzchzNzfGQP.j8oylRFJJu6VMMGe9uToxEOFVwws.tmaYZNrK/4Uu" />
+        <beans:property name="username" value="root" />
+        <beans:property name="password" value="root" />
     </beans:bean>
     <beans:bean id="bcrypt"
                 class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>

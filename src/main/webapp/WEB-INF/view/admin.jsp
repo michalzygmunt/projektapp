@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>${ message }</h1>
+<jsp:include page="booklist.jsp"/>
 <form id="logout" action="<%=request.getContextPath()%>/logout" method="post" >
  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
  <input type="submit" value="logout" />

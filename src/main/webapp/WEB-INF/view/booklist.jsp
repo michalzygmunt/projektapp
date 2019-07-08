@@ -43,6 +43,6 @@
 
 <div>
  <input type="button" class="btn btn-primaty" value="Add Book"
- onclick="window.location.href='formadd';return false;" />
+ onclick="window.location.href='/projektapp/books/formadd';return false;" />
  </div>
 

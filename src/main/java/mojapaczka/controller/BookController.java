@@ -5,6 +5,7 @@ import mojapaczka.entity.Kategoria;
 import mojapaczka.entity.Ksiazka;
 import mojapaczka.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +40,7 @@ public class BookController {
         model.addAttribute("autors",autors);
         return "autorlist";
     }*/
-
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/formadd")
     public String addForm(Model model){
         Ksiazka book = new Ksiazka();
@@ -62,7 +63,7 @@ public class BookController {
         model.addAttribute("autor",autor);
         return "addautorform";
     }*/
-
+   @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/saveBook")
     public String saveBook(@ModelAttribute("book") Ksiazka ksiazka){
 
@@ -99,6 +100,8 @@ public class BookController {
        return "updateCategoryForm";
    }*/
 
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/updateBookForm")
     public String updateBookForm(@RequestParam(value = "bookId", required = true) int bookid, Model model){
         Ksiazka ksiazka = bookService.getBook(bookid);
@@ -122,6 +125,7 @@ public class BookController {
         return "deletebookform";
     }*/
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/deleteBookFormularz")
     public String deleteBookForm(@RequestParam(value = "bookId", required = true) int bookid, Model model){
         Ksiazka ksiazka = bookService.getBook(bookid);

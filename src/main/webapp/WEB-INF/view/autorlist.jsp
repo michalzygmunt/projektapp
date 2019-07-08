@@ -40,7 +40,7 @@
 </html>
 
 <div>
- <input type="button" value="Add Book"
- onclick="window.location.href='formautoradd';return false;" />
+ <input type="button" value="Add Autor"
+ onclick="window.location.href='/books/formautoradd';return false;" />
  </div>
 

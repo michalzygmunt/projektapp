@@ -9,13 +9,14 @@
 
 <a href="${pageContext.request.contextPath}/books/autors "> return </a>
 <form:form action="saveAutor" modelAttribute="autor" method="GET">
- <c:forEach var="utors" items="${autors}" >
-    <h2>usunales autora kolzeko</h2>
+ <c:forEach var="autors" items="${autors}" >
+    <h2>usunales autora</h2>
     <table>
         <tr>
-            <td>nimie :</td>
+            <td>imie :</td>
             <td>${autor.imie}</td>
-            <td>nazwisko :</td>
+
+            <td> nazwisko :</td>
             <td>${autor.nazwisko}</td>
 
     </table>

@@ -15,7 +15,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd
 http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx.xsd
 http://www.springframework.org/schema/security
-http://www.springframework.org/schema/security/springsecurity.xsd"
+http://www.springframework.org/schema/security/spring-security.xsd"
 >
     <!-- twoja paczka z beanmi -->
     <context:component-scan base-package="mojapaczka" />

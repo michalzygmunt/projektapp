@@ -10,7 +10,7 @@
 <a href="${pageContext.request.contextPath}/books/categories "> return </a>
 <form:form action="saveCategory" modelAttribute="category" method="GET">
  <c:forEach var="categories" items="${categories}" >
-    <h2>USUNALES KATEGORIE KOLEZKO</h2>
+    <h2>USUNALES KATEGORIE</h2>
     <table>
         <tr>
             <td>nazwa :</td>

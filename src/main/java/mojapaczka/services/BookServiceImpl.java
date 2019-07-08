@@ -5,6 +5,7 @@ import mojapaczka.entity.Autor;
 import mojapaczka.entity.Kategoria;
 import mojapaczka.entity.Ksiazka;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -56,6 +57,7 @@ public class BookServiceImpl implements BookService {
     public Autor getAutor(int autorid) {
         return bookDAO.getAutor(autorid);
     }
+
 
     @Override
     @Transactional
